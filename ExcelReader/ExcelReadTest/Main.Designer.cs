@@ -36,7 +36,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBoxSheetsList = new System.Windows.Forms.ListBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.LoadListData = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -69,9 +69,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 45);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 45);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(856, 534);
+            this.dataGridView1.Size = new System.Drawing.Size(865, 534);
             this.dataGridView1.TabIndex = 2;
             // 
             // cbHDR
@@ -109,6 +109,7 @@
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(6);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -117,7 +118,7 @@
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.listBox1);
+            this.splitContainer2.Panel2.Controls.Add(this.listBoxSheetsList);
             this.splitContainer2.Size = new System.Drawing.Size(866, 203);
             this.splitContainer2.SplitterDistance = 583;
             this.splitContainer2.TabIndex = 0;
@@ -127,19 +128,25 @@
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.richTextBox1.Size = new System.Drawing.Size(583, 203);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
-            // listBox1
+            // listBoxSheetsList
             // 
-            this.listBox1.ContextMenuStrip = this.contextMenuStrip1;
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(0, 0);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(279, 203);
-            this.listBox1.TabIndex = 0;
+            this.listBoxSheetsList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxSheetsList.ContextMenuStrip = this.contextMenuStrip1;
+            this.listBoxSheetsList.FormattingEnabled = true;
+            this.listBoxSheetsList.IntegralHeight = false;
+            this.listBoxSheetsList.Location = new System.Drawing.Point(0, 0);
+            this.listBoxSheetsList.Margin = new System.Windows.Forms.Padding(0);
+            this.listBoxSheetsList.Name = "listBoxSheetsList";
+            this.listBoxSheetsList.Size = new System.Drawing.Size(279, 203);
+            this.listBoxSheetsList.TabIndex = 0;
+            this.listBoxSheetsList.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // contextMenuStrip1
             // 
@@ -187,7 +194,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxSheetsList;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem LoadListData;
     }

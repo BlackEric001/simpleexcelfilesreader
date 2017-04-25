@@ -27,7 +27,7 @@ namespace ExcelReadTest
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.FileName = "";
 
-            listBox1.ContextMenuStrip.Enabled = false;
+            listBoxSheetsList.ContextMenuStrip.Enabled = false;
 
             excelReader.log = new writeLog(this.WriteLog);
         }
@@ -54,7 +54,9 @@ namespace ExcelReadTest
                 else
                 {
                     tableNames.Clear();
+                    dataGridView1.DataSource = oTbl;
 
+                    tableNames.Add(SCHEMAS_NAME);
                     foreach (DataRow row in oTbl.Rows)
                     {
                         string data = String.Empty;
@@ -71,8 +73,8 @@ namespace ExcelReadTest
                     displayTablesList();
                 }
 
-                if (tableNames.Count > 0)
-                    loadExcelListData(tableNames[0]);
+               // if (tableNames.Count > 0)
+               //     loadExcelListData(tableNames[0]);
             }
             catch (Exception ex)
             {
@@ -94,22 +96,19 @@ namespace ExcelReadTest
 
         private void displayTablesList()
         {
-            listBox1.Items.Clear();
+            listBoxSheetsList.Items.Clear();
 
             foreach (string tName in tableNames)
-                listBox1.Items.Add(tName);
+                listBoxSheetsList.Items.Add(tName);
 
-            listBox1.ContextMenuStrip.Enabled = listBox1.Items.Count > 0;
+            listBoxSheetsList.ContextMenuStrip.Enabled = listBoxSheetsList.Items.Count > 0;
         }
 
 
 
         private void LoadListData_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex >= 0)
-                loadExcelListData(listBox1.SelectedItem.ToString());
-            else
-                MessageBox.Show("Выберите лист для загрузки данных!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            loadTable();
         }
 
         private void loadExcelListData(string listName)
@@ -142,6 +141,24 @@ namespace ExcelReadTest
 
         private const string TABLE_NAME_COLUMN = "TABLE_NAME";
         private const string APP_NAME = "Excel Files Reader 1.0 alpha";
+        private const string SCHEMAS_NAME = "Tables list (schema info)";
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadTable();
+        }
        
+        private void loadTable()
+        {
+            if (listBoxSheetsList.SelectedIndex >= 0)
+            {
+                if (listBoxSheetsList.SelectedItem.ToString() == SCHEMAS_NAME)
+                    readFile(openFileDialog1.FileName);
+                else
+                    loadExcelListData(listBoxSheetsList.SelectedItem.ToString());
+            }
+            else
+                MessageBox.Show("Выберите лист для загрузки данных!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }
