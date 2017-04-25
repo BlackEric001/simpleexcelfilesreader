@@ -141,7 +141,7 @@ namespace ExcelReadTest
         private List<string> tableNames = new List<string>();
 
         private const string TABLE_NAME_COLUMN = "TABLE_NAME";
-        private const string APP_NAME = "Excel File Reader";
+        private const string APP_NAME = "Excel Files Reader 1.0 alpha";
        
     }
 }

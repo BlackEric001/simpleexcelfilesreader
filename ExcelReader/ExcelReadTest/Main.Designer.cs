@@ -71,7 +71,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(7, 45);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(438, 304);
+            this.dataGridView1.Size = new System.Drawing.Size(856, 534);
             this.dataGridView1.TabIndex = 2;
             // 
             // cbHDR
@@ -101,8 +101,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(448, 477);
-            this.splitContainer1.SplitterDistance = 352;
+            this.splitContainer1.Size = new System.Drawing.Size(866, 789);
+            this.splitContainer1.SplitterDistance = 582;
             this.splitContainer1.TabIndex = 4;
             // 
             // splitContainer2
@@ -118,8 +118,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.listBox1);
-            this.splitContainer2.Size = new System.Drawing.Size(448, 121);
-            this.splitContainer2.SplitterDistance = 302;
+            this.splitContainer2.Size = new System.Drawing.Size(866, 203);
+            this.splitContainer2.SplitterDistance = 583;
             this.splitContainer2.TabIndex = 0;
             // 
             // richTextBox1
@@ -127,7 +127,7 @@
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(302, 121);
+            this.richTextBox1.Size = new System.Drawing.Size(583, 203);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -138,7 +138,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(0, 0);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(142, 121);
+            this.listBox1.Size = new System.Drawing.Size(279, 203);
             this.listBox1.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -146,12 +146,12 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LoadListData});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(149, 26);
             // 
             // LoadListData
             // 
             this.LoadListData.Name = "LoadListData";
-            this.LoadListData.Size = new System.Drawing.Size(152, 22);
+            this.LoadListData.Size = new System.Drawing.Size(148, 22);
             this.LoadListData.Text = "Load List Data";
             this.LoadListData.Click += new System.EventHandler(this.LoadListData_Click);
             // 
@@ -159,7 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 477);
+            this.ClientSize = new System.Drawing.Size(866, 789);
             this.Controls.Add(this.splitContainer1);
             this.MinimumSize = new System.Drawing.Size(400, 300);
             this.Name = "Main";
