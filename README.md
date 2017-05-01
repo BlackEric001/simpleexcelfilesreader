@@ -9,5 +9,4 @@ TO DO :
 0. Make new main form look :)
 1. Localize
 2. Open files via drug to shortcut
-3. Show data from system table: GetSchema("Tables");
-4. Add custom xml part reader
+3. Add custom xml part reader

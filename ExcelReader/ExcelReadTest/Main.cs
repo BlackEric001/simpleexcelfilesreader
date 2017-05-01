@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 using System.Data.OleDb;
+using System.IO;
 
 namespace ExcelReadTest
 {
@@ -30,15 +31,29 @@ namespace ExcelReadTest
             listBoxSheetsList.ContextMenuStrip.Enabled = false;
 
             excelReader.log = new writeLog(this.WriteLog);
+
+            //Read command line args. Need to for make possibility for open files by drug to shortcut
+            string[] args = Environment.GetCommandLineArgs();
+
+            if (args.Length > 1 && File.Exists(args[1]))
+            {
+                openExcelFile(args[1]);
+                openFileDialog1.FileName = args[1];
+            }
         }
 
         private void btnOpenFile_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                readFile(openFileDialog1.FileName);
-                this.Text = APP_NAME + "  " + openFileDialog1.FileName;
+                openExcelFile(openFileDialog1.FileName);
             }
+        }
+
+        private void openExcelFile(string fileName)
+        {
+            readFile(fileName);
+            this.Text = APP_NAME + "  " + fileName;
         }
 
         private void readFile(string fileName)
