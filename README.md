@@ -5,7 +5,7 @@ If for xlsx files you get error message "Microsoft.ACE.OLEDB.12.0" is issued is 
 https://www.microsoft.com/en-us/download/confirmation.aspx?id=13255
 
 
-#Added: 
+##Added: 
 
 2017-01-05
 
@@ -14,7 +14,7 @@ Open files via drug to shortcut (lnk)
 Show data from schema table
 
 
-#TO DO:
+##TO DO:
 
 0. Make new main form look :)
 
