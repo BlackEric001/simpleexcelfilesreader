@@ -5,8 +5,13 @@ If for xlsx files you get error message "Microsoft.ACE.OLEDB.12.0" is issued is 
 https://www.microsoft.com/en-us/download/confirmation.aspx?id=13255
 
 
+2017-01-05
+Added: 
+Open files via drug to shortcut (lnk)
+Show data from schema table
+
+
 TO DO :
 0. Make new main form look :)
 1. Localize
-2. Open files via drug to shortcut
-3. Add custom xml part reader
+2. Add custom xml part reader
