@@ -9,8 +9,8 @@ https://www.microsoft.com/en-us/download/confirmation.aspx?id=13255
 
 2017-01-05:
 
-Open files via drug to shortcut (lnk)
-Show data from schema table
+1. Open files via drug to shortcut (lnk)
+2. Show data from schema table
 
 
 ## TO DO:
