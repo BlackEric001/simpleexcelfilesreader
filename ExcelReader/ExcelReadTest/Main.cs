@@ -155,7 +155,7 @@ namespace ExcelReadTest
         private List<string> tableNames = new List<string>();
 
         private const string TABLE_NAME_COLUMN = "TABLE_NAME";
-        private const string APP_NAME = "Excel Files Reader 1.0 alpha";
+        private const string APP_NAME = "Excel Files Reader 1.0 beta";
         private const string SCHEMAS_NAME = "Tables list (schema info)";
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
