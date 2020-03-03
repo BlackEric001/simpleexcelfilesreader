@@ -105,6 +105,9 @@ namespace ExcelReadTest
 
                 dt.Load(oRdr);
 
+                log("dt.Columns.Count = " + dt.Columns.Count);
+                log("dt.Rows.Count = " + dt.Rows.Count);
+
                 return dt.Rows.Count > 0;
             }
             catch (Exception ex)
